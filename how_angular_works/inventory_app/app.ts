@@ -27,7 +27,7 @@ class Product {
 }
 
 /**
- * @ProductImage: A component to show a single Product's image 
+ * @ProductImage: A component to show a single Product's image
  */
 @Component({
   selector: 'product-image',
@@ -42,7 +42,7 @@ class ProductImage {
 }
 
 /**
- * @ProductDepartment: A component to show the breadcrumbs to a 
+ * @ProductDepartment: A component to show the breadcrumbs to a
  * Product's department
  */
 @Component({
@@ -62,7 +62,7 @@ class ProductDepartment {
 }
 
 /**
- * @PriceDisplay: A component to show the price of a 
+ * @PriceDisplay: A component to show the price of a
  * Product
  */
 @Component({
@@ -103,7 +103,7 @@ class ProductRow {
 }
 
 /**
- * @ProductsList: A component for rendering all ProductRows and 
+ * @ProductsList: A component for rendering all ProductRows and
  * storing the currently selected Product
  */
 @Component({
@@ -113,9 +113,9 @@ class ProductRow {
   outputs: ['onProductSelected'],
   template: `
   <div class="ui items">
-    <product-row 
-      *ngFor="#myProduct of productList" 
-      [product]="myProduct" 
+    <product-row
+      *ngFor="#myProduct of productList"
+      [product]="myProduct"
       (click)='clicked(myProduct)'
       [class.selected]="isSelected(myProduct)">
     </product-row>
@@ -129,13 +129,13 @@ class ProductsList {
   productList: Product[];
 
   /**
-   * @ouput onProductSelected - outputs the current 
+   * @ouput onProductSelected - outputs the current
    *          Product whenever a new Product is selected
    */
   onProductSelected: EventEmitter<Product>;
 
   /**
-   * @property currentProduct - local state containing 
+   * @property currentProduct - local state containing
    *             the currently selected `Product`
    */
   currentProduct: Product;
@@ -166,8 +166,8 @@ class ProductsList {
   directives: [ProductsList],
   template: `
   <div class="inventory-app">
-    <products-list 
-      [productList]="products" 
+    <products-list
+      [productList]="products"
       (onProductSelected)="productWasSelected($event)">
     </products-list>
   </div>
