@@ -13,8 +13,8 @@ import { FORM_DIRECTIVES } from 'angular2/common';
 
       <div class="field">
         <label for="skuInput">SKU</label>
-        <input type="text" 
-               id="skuInput" 
+        <input type="text"
+               id="skuInput"
                placeholder="SKU"
                ngControl="sku">
       </div>
